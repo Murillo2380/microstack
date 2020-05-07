@@ -1,0 +1,14 @@
+<t:layout
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+    t:title="Inicio">
+
+<div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;">
+    <h1 style="font-size:10vw">Hola mundo !!</h1>
+</div>
+
+</t:layout>

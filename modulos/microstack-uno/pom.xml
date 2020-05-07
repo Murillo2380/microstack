@@ -11,36 +11,10 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>microstack-web</artifactId>
-    <packaging>jar</packaging>
-    <name>microstack-web</name>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring-release-version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <artifactId>microstack-uno</artifactId>
+    <name>microstack-uno</name>
 
     <dependencies>
-        <!-- Lo ponemos de primero por problemas con en servlet-api.jar en desarrollo -->
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-webapp</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <!-- Para que se incluya en el Class-Path del MANIFEST.MF jar -->
-            <scope>compile</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -53,7 +27,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
-        <!-- Lo necesita tapestry-spring y lo poenemos para asegurar misma version de spring -->
+        <!-- Lo necesita tapestry-spring y lo ponemos para asegurar misma version de spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -77,20 +51,9 @@
             <artifactId>tapestry-spring</artifactId>
         </dependency>
 
-        <!-- Nueva version de slf4j -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-        </dependency>
-
-        <dependency>
-           <groupId>microstack</groupId>
-            <artifactId>microstack-uno</artifactId>
         </dependency>
     </dependencies>
 

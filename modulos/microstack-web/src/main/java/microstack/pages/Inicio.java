@@ -1,5 +1,7 @@
 package microstack.pages;
 
+import java.time.LocalDate;
+
 import org.apache.tapestry5.Link;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.PageRenderLinkSource;
@@ -17,5 +19,9 @@ public class Inicio {
      */
     public Link getInicioUnoPage() {
         return renderLinkSource.createPageRenderLink(IndexUno.class);
+    }
+
+    public LocalDate getHoy() {
+        return LocalDate.now();
     }
 }

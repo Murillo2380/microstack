@@ -92,6 +92,11 @@
            <groupId>microstack</groupId>
             <artifactId>microstack-uno</artifactId>
         </dependency>
+
+        <dependency>
+           <groupId>microstack</groupId>
+            <artifactId>microstack-util</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

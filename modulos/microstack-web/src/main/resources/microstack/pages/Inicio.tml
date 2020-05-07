@@ -11,6 +11,7 @@
     height: 100vh;">
     <h1 style="font-size:5vw">Hola mundo !!</h1>
     <div>
+        Hoy es <t:util.fecha t:valor="hoy"/>
         <a class="btn btn-default" href="${inicioUnoPage}">
             <i class="glyphicon glyphicon-link"/>
             Uno

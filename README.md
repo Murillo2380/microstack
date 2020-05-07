@@ -1,7 +1,6 @@
 # microstack
 Versión simplificada del stack tecnógico de la diputación a efectos de formación
 
-
 # Instalar SDK
 
 ## Instalar NodeJS
@@ -27,12 +26,6 @@ npm install -g tslint
 
 Instalar Git for Windows  [[https://gitforwindows.org/|https://gitforwindows.org/]]
 
-Configurar git:
-
-```
-git config --global core.autocrlf true
-```
-
 ## Instalar Java
 
 Descargar el JDK de Java de [AdoptJDK.Net](https://adoptopenjdk.net/)
@@ -44,7 +37,7 @@ Descargar el zip y descomprimir el ''C:\opt''.
 ## Instalar Eclipse
 
   - Descargar el [instalador de Eclipse](https://www.eclipse.org/downloads/packages/installer)
-  - Arrancarlo, comprobar si hay actualizaciones (pone UPDATE el menú del icono del bocadillo). Si no hay un Java en el sistema (recomendado), se puede arrancar el instalador con JAVA_HOME=/c/opt/jdk8… ~/Downloads/eclipse-inst-win64.exe usando git-bash. {{:interno:desarrollo:subtel:eclipse_20181226-133920.png}}
+  - Arrancarlo, comprobar si hay actualizaciones (pone UPDATE el menú del icono del bocadillo). Si no hay un Java en el sistema (recomendado), se puede arrancar el instalador con JAVA_HOME=/c/opt/jdk8… ~/Downloads/eclipse-inst-win64.exe usando git-bash.
   - En advanced mode, pinchar en el icono de +. En el diálogo que se abre pinchar el "Browse File System" y elegir el fichero ''DacorunaSDK... .setup'' en el directorio eclipse del raiz del git de subtel. 
   - Elegir la JVM y "Next" hasta la pantalla de variables. En la pantalla de variables marcar "Show all variables", y poner c:\opt\ en "Root install folder". 
   - Finish para hacer la instalación. 
@@ -83,7 +76,7 @@ En ''Window -> Preferences ... Type Filters'' añadir
 
 ### Instalar Visual Studio Code 
 
-Descragar el [instalador](https://code.visualstudio.com/).
+Descargar el [instalador](https://code.visualstudio.com/).
 
 Instalar la versión de usuario, no la de sistema.
 

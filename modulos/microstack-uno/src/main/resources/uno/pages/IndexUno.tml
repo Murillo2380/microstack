@@ -7,9 +7,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     height: 100vh;">
     <h1 style="font-size:5vw">Uno !!</h1>
+    <p class="btn-toolbar">
+        <t:eventLink
+            t:async="true"
+            t:event="saludar-es"
+            class="btn btn-default">
+            Saludar (ES)
+        </t:eventLink>
+        <t:eventLink
+            t:async="true"
+            t:event="saludar-gl"
+            class="btn btn-default">
+            Saludar (GL)
+        </t:eventLink>
+        <t:eventLink
+            t:async="true"
+            t:event="limpiar"
+            class="btn btn-default">
+            <i class="glyphicon glyphicon-remove"/>
+        </t:eventLink>
+    </p>
+    <p>
+        <t:zone t:id="znSaludo"/>
+    </p>
 </div>
+
+<t:block t:id="blkSaludo">
+    <div class="alert alert-success">
+        Buenos días !!
+    </div>
+</t:block>
 
 </t:layout>

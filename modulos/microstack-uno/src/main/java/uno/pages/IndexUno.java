@@ -7,6 +7,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.ajax.AjaxResponseRenderer;
 
 public class IndexUno {
+    private static final String ZN_SALUDO = "znSaludo";
     @Inject
     AjaxResponseRenderer ajaxResponseRenderer;
     @Inject
@@ -14,13 +15,13 @@ public class IndexUno {
 
     @OnEvent("saludar-es")
     void doSaludarES() {
-        ajaxResponseRenderer.addRender("znSaludo", blkSaludo);
+        ajaxResponseRenderer.addRender(ZN_SALUDO, blkSaludo);
     }
 
     @OnEvent("saludar-gl")
     void doSaludarGL() {
         ajaxResponseRenderer.addRender(
-            "znSaludo",
+            ZN_SALUDO,
             (Renderable) writer -> {
                 writer.element("div", "class", "alert alert-info");
                 writer.write("Bos días");
@@ -31,7 +32,7 @@ public class IndexUno {
 
     @OnEvent("limpiar")
     void doLimpiar() {
-        ajaxResponseRenderer.addRender("znSaludo", (Renderable) writer -> {});
+        ajaxResponseRenderer.addRender(ZN_SALUDO, (Renderable) writer -> {});
     }
 
 }

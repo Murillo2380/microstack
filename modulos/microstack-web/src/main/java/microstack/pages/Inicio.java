@@ -6,6 +6,7 @@ import org.apache.tapestry5.Link;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.PageRenderLinkSource;
 
+import uno.pages.CanvasUno;
 import uno.pages.IndexUno;
 
 public class Inicio {
@@ -19,6 +20,10 @@ public class Inicio {
      */
     public Link getInicioUnoPage() {
         return renderLinkSource.createPageRenderLink(IndexUno.class);
+    }
+
+    public Link getCanvasUnoPage() {
+        return renderLinkSource.createPageRenderLink(CanvasUno.class);
     }
 
     public LocalDate getHoy() {

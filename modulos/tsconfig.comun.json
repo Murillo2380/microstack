@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": [
+            "es6",
+            "dom",
+            "es2015.promise",
+        ],
+        "module": "amd",  // system, commonjs, umd
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "removeComments": true,
+        "noImplicitAny": false,                 // Complicado de activar ... intentarlo
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "watch": false,
+        "allowJs": false,
+        "alwaysStrict": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": false,              // Complicado de activar ... intentarlo
+        "strictPropertyInitialization": false,  // Complicado de activar ... intentarlo
+        "esModuleInterop": true, // Para usar vue con ts y que funcionen el tipado
+        "jsx": "react",
+        "jsxFactory": "h",
+        "paths": {
+            "*": ["*", "../microstack-util/src/main/ts-type-modules/*"]
+        },
+        "typeRoots": [
+            "../microstack-taputil/src/main/ts-type-modules",
+        ],
+        "downlevelIteration": true
+    },
+    "compileOnSave": true
+}

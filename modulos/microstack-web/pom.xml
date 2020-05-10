@@ -77,6 +77,26 @@
             <artifactId>tapestry-spring</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+        </dependency>
+
         <!-- Nueva version de slf4j -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -96,6 +116,11 @@
         <dependency>
            <groupId>microstack</groupId>
             <artifactId>microstack-util</artifactId>
+        </dependency>
+
+        <dependency>
+           <groupId>microstack</groupId>
+            <artifactId>microstack-jooq</artifactId>
         </dependency>
     </dependencies>
 

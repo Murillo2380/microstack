@@ -1,0 +1,45 @@
+<t:layout
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+    t:title="Inicio">
+
+<h1>Clientes</h1>
+
+<t:grid
+    t:source="clientes"
+    t:row="cli"
+    t:rowsPerPage="10"
+    t:pagerPosition="bottom"
+    t:include="firstName,lastName"
+    t:add="ver"
+    t:inPlace="true">
+    <p:lastNameHeader>
+        Apellidos
+    </p:lastNameHeader>
+    <p:verHeader></p:verHeader>
+    <p:verCell>
+        <t:eventLink
+            t:async="true"
+            t:event="pedidos"
+            t:context="cli.id"
+            class="btn btn-sm btn-default">
+            Ver
+        </t:eventLink>
+    </p:verCell>
+    <p:empty>
+        <div class="text-center text-warning">Non hay resultados para mostrar.</div>
+    </p:empty>
+</t:grid>
+
+<t:zone t:id="znPedidos"/>
+
+<t:block t:id="blkPedidos">
+    <h2>Pedidos de ${nombreCliente}</h2>
+    <t:loop t:source="pedidos" t:value="pedido">
+        <div>
+            <t:util.fecha t:valor="pedido.orderDate"/>, atendido por ${pedido.empleado}
+        </div>
+    </t:loop>
+</t:block>
+
+</t:layout>

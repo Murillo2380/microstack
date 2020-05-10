@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.comun.json",
+    "compilerOptions": {
+        "outDir": "target/classes",
+        "rootDir": "./src/main/ts",
+        "baseUrl": "."
+    },
+    "include": [
+        "src/main/ts/**/*",
+        "../microstack-util/src/main/custom-types/**/*.d.ts",
+        "../microstack-util/src/main/ts-type-modules/**/*.d.ts"
+    ],
+    "exclude": ["node_modules"]
+}

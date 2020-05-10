@@ -19,7 +19,13 @@
             Uno
         </a>
         <a class="btn btn-default" href="${canvasUnoPage}">
-            Canvas
+            Partículas
+        </a>
+        <a class="btn btn-default" href="${floresUnoPage}">
+            Flores
+        </a>
+        <a class="btn btn-default" href="${clientesPage}">
+            Clientes
         </a>
     </p>
 </div>

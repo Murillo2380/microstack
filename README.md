@@ -13,10 +13,16 @@ Versión simplificada del stack tecnógico de la diputación a efectos de formac
 
 ## Actualizar npm y typescript
 
-<code>
+```
 npm install -g npm
 npm install -g typescript@latest
-</code>
+```
+
+En windows puede que tengamos que ejecutar en PowerShell lo siguiente para poder usar tsc:
+
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 ## Instalar tslint
 
@@ -93,6 +99,22 @@ code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 
 Comprobar los módulos npm instalados a nivel global:
 
-''npm -g list --depth 0''
+```npm -g list --depth 0```
 
 Eliminar los que sobren con ''npm -g rm <paquete>''
+
+
+# Arrancar el proyecto
+
+La primera vez (o cada vez que se cambie el esquema de la base de datos) hay que ejecutar en Eclipse (Run -> Run Configurations) la tarea "microstack-jooq install". Esta tarea, hace las migraciones necesaria de la base de datos y genera las clases JOOQ de soporte.
+
+Una vez hecho eso, ya se puede arrancar la aplicación con la tarea "Main - Desa". Para desarrollo mejor arrancarla con Debug -> Debug Configurations.
+
+Cuando arranque se puede navegar a http://localhost:8080/
+
+Para arrancar la consola de H2 se pude usar, ajustando la ruta de java:
+
+´´´/c/opt/jdk8u242-b08/bin/java -jar ~/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar  -url jdbc:h2:file:~/.microstack/db -user sa```
+
+
+

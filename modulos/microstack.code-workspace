@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "microstack-uno"
+		},
+		{
+			"path": "microstack-util"
+		},
+		{
+			"path": "microstack-web"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+        "telemetry.enableCrashReporter": false,
+        "telemetry.enableTelemetry": false,
+        "files.exclude": {
+			"**/node_modules": true,
+			"target": true,
+			".project": true,
+			".classpath": true,
+			".derived": true,
+			".settings": true,
+			"pom.xml": true
+        }
+    }
+}

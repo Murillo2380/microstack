@@ -30,7 +30,7 @@ npm install -g tslint
 
 ## Instalar y actualizar GIT
 
-Instalar Git for Windows  [[https://gitforwindows.org/|https://gitforwindows.org/]]
+Instalar [Git for Windows](https://gitforwindows.org/|https://gitforwindows.org/)
 
 ## Instalar Java
 
@@ -114,7 +114,10 @@ Cuando arranque se puede navegar a http://localhost:8080/
 
 Para arrancar la consola de H2 se pude usar, ajustando la ruta de java:
 
-´´´/c/opt/jdk8u242-b08/bin/java -jar ~/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar  -url jdbc:h2:file:~/.microstack/db -user sa```
+```/c/opt/jdk8u242-b08/bin/java -jar ~/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar  -url jdbc:h2:file:~/.microstack/db -user sa```
 
+# Visual Studio Code
 
+Para trabajar con VSC, se ha creado un workspace. Para usarlo, en VSC abrir el menu `File -> Open Workspace` y elegir modulos/microstack.code-workspace
 
+Para compilar los .ts se usa el menu `Terminal - New terminal`, se elige la carpeta, y en el terminal se ejecuta `tsc --watch`. Con eso compilará los .ts del módulo ante cualquier cambio ([mas información](https://www.typescriptlang.org/docs/handbook/compiler-options.html)).

@@ -33,7 +33,7 @@ public class AppConfig {
             .withDriverClassName(env.getRequiredProperty("jdbc.driverClassName"))
             .withUrl(env.getRequiredProperty("jdbc.url"))
             .withUsername(env.getRequiredProperty("jdbc.username"))
-            .withPassword("jdbc.password")
+            .withPassword(env.getRequiredProperty("jdbc.password"))
             .withMaximumPoolSize(env.getRequiredProperty("dbpool.maxConnectionsPerPartition", Integer.class))
             .withMinimumIdle(env.getRequiredProperty("dbpool.acquireIncrement", Integer.class))
             .withStatementsCacheSize(env.getRequiredProperty("dbpool.statementsCacheSize", Integer.class))

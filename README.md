@@ -24,10 +24,6 @@ En windows puede que tengamos que ejecutar en PowerShell lo siguiente para poder
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-## Instalar tslint
-
-npm install -g tslint
-
 ## Instalar y actualizar GIT
 
 Instalar [Git for Windows](https://gitforwindows.org/|https://gitforwindows.org/)
@@ -92,7 +88,6 @@ Una vez instalado, añadir las siguientes extensiones, desde linea de comando:
 code --install-extension esbenp.prettier-vscode
 code --install-extension miclo.sort-typescript-imports
 code --install-extension zengxingxin.sort-js-object-keys
-code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 ```
 
 ### Limpieza periódica

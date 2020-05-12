@@ -1,0 +1,8 @@
+<t:layout
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+    t:title="Inicio">
+
+<div id="app"/>
+
+</t:layout>

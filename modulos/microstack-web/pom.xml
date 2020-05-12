@@ -122,6 +122,11 @@
            <groupId>microstack</groupId>
             <artifactId>microstack-jooq</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>microstack</groupId>
+            <artifactId>microstack-mithril</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

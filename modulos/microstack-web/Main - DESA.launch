@@ -7,14 +7,14 @@
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsDisabledIds"/>
 <setAttribute key="name.schedenig.eclipse.grepconsole.StatisticsEnabledIds"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/microstack-web/src/main/java/microstack/Main.java"/>
+<listEntry value="/microstack-web/src/main/java/microstack/microstack/Main.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="microstack.Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="microstack.microstack.Main"/>
 <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="microstack-web"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="microstack-web"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>

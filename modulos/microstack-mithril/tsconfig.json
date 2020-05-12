@@ -1,0 +1,15 @@
+{
+    "extends": "../tsconfig.comun.json",
+    "compilerOptions": {
+        "jsxFactory": "m", // Para usar con mitrhill y no tener que importar mithrill como h (lo habitual es m)
+        "outDir": "target/classes",
+        "rootDir": "./src/main/ts",
+        "baseUrl": "."
+    },
+    "include": [
+        "src/main/ts/**/*",
+        "../microstack-util/src/main/custom-types/**/*.d.ts",
+        "../microstack-util/src/main/ts-type-modules/**/*.d.ts"
+    ],
+    "exclude": ["node_modules"]
+}

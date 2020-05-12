@@ -1,0 +1,10 @@
+<t:layout
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter"
+    t:title="Inicio">
+
+<div style="position:absolute; top:0; left:0" >
+    <canvas id="canvas"/>
+</div>
+
+</t:layout>

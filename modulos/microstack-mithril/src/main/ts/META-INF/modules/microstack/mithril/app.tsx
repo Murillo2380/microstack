@@ -1,15 +1,17 @@
 import m from "mithril"
 import { MithrilTsxComponent } from './mithrill-ts-component'
+import { Clientes } from './clientes';
 
 export default function() {
+    const abc: number =  123;
     m.mount(document.getElementById("app"), App)
 
 }
 
 const estado = {
-    contador: 0,
+    contador: 1000,
     incrementar() {
-        this.contador++
+        this.contador += 5;  
     },
     decrementar() {
         this.contador--
@@ -17,7 +19,16 @@ const estado = {
 }
 
 class App extends MithrilTsxComponent<{}> {
-    // prettier-ignore
+    users = [
+        {
+            name: "N1",
+            age: 18
+        },
+        {
+            name: "N2",
+            age: 22,
+        } 
+    ]
     view() {
         return (
             <div style={{...cssCentrado, fontSize: "5vh"}}>
@@ -27,6 +38,7 @@ class App extends MithrilTsxComponent<{}> {
                 <span style="margin-left: 1em">
                     <Decrementar/>
                     <Incrementar/>
+                    <Clientes clientes={this.users}  />
                 </span>
             </div>
         )

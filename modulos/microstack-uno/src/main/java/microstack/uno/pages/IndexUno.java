@@ -30,6 +30,18 @@ public class IndexUno {
         );
     }
 
+    @OnEvent("nuestro-evento")
+    void doNuestroEvento() {
+        ajaxResponseRenderer.addRender(
+            ZN_SALUDO,
+            (Renderable) writer -> {
+                writer.element("div", "class", "alert alert-info");
+                writer.write("Hola mundo");
+                writer.end();
+            }
+        );
+    }
+
     @OnEvent("limpiar")
     void doLimpiar() {
         ajaxResponseRenderer.addRender(ZN_SALUDO, (Renderable) writer -> {});

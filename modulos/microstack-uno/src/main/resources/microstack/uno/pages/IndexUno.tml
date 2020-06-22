@@ -23,6 +23,12 @@
             class="btn btn-default">
             Saludar (GL)
         </t:eventLink>
+         <t:eventLink
+            t:async="true"
+            t:event="nuestro-evento"
+            class="btn btn-default">
+            Hola
+        </t:eventLink>
         <t:eventLink
             t:async="true"
             t:event="limpiar"

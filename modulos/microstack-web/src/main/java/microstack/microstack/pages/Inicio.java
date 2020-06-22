@@ -18,7 +18,7 @@ public class Inicio {
     /**
      * Hacemos los enlaces de esta manera para permitir refactorizar de forma
      * segura.
-     * @return Un enlace una otra página
+     * @return Un enlace una otra página vv
      */
     public Link getInicioUnoPage() {
         return renderLinkSource.createPageRenderLink(IndexUno.class);
@@ -42,6 +42,10 @@ public class Inicio {
 
     public Link getMithrilPage() {
         return renderLinkSource.createPageRenderLink(AppMithril.class);
+    }
+
+    public String getMyName() { // Camel case myName getMyName
+        return "Murillo Ferreira";
     }
 
 

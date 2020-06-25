@@ -13,8 +13,6 @@
 </head>
 
 <body>
-    <div class="container">
-        <t:body/>
-    </div>
+    <t:body/>
 </body>
 </html>

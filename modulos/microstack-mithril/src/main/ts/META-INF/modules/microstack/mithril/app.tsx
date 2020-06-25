@@ -1,88 +1,90 @@
 import m from "mithril"
 import { MithrilTsxComponent } from './mithrill-ts-component'
-import { Clientes } from './clientes';
+import AppHeader from './AppHeader'
+import ContentCard from './ContentCard';
 
 export default function() {
-    const abc: number =  123;
     m.mount(document.getElementById("app"), App)
-
 }
 
-const estado = {
-    contador: 1000,
-    incrementar() {
-        this.contador += 5;  
+const posts = [
+
+    {
+        name: "9Gag",
+        avatar: `https://randomuser.me/api/portraits/thumb/${Math.random() * 75 > 0.5 ? "men" : "women"}/${Math.ceil(Math.random() * 75)}.jpg`,
+        picture: "https://picsum.photos/600/700?random=1",
+        comments: [
+            {
+                value: "Bonito!",
+                personName: "Juan"
+            },
+            {
+                value: "¡Desfrute!",
+                personName: "Maria"
+            }
+        ]  
     },
-    decrementar() {
-        this.contador--
+    {
+        name: "PerfilGuay",
+        avatar: `https://randomuser.me/api/portraits/thumb/${Math.random() * 75 > 0.5 ? "men" : "women"}/${Math.ceil(Math.random() * 75)}.jpg`,
+        picture: "https://picsum.photos/600/700?random=2",
+        comments: []
+    },
+    {
+        name: "Jose",
+        avatar: `https://randomuser.me/api/portraits/thumb/${Math.random() * 75 > 0.5 ? "men" : "women"}/${Math.ceil(Math.random() * 75)}.jpg`,
+        picture: "https://picsum.photos/600/700?random=3",
+        comments: [{
+            value: "jajajajajajaja",
+            personName: "e3pw_lovik"
+        }]
+    },
+    {
+        name: "Cloud9",
+        avatar: `https://randomuser.me/api/portraits/thumb/${Math.random() * 75 > 0.5 ? "men" : "women"}/${Math.ceil(Math.random() * 75)}.jpg`,
+        picture: "https://picsum.photos/600/700?random=4",
+        comments: [{
+            value: "No creooooooooo",
+            personName: "__pdr0"
+        }]
     }
-}
+
+]
 
 class App extends MithrilTsxComponent<{}> {
-    users = [
-        {
-            name: "N1",
-            age: 18
-        },
-        {
-            name: "N2",
-            age: 22,
-        } 
-    ]
+    searchText = "";
+    constructor(){
+        super();
+    }
     view() {
         return (
-            <div style={{...cssCentrado, fontSize: "5vh"}}>
-                <div>
-                    Contador = <Contador/>
+            <div style={{ background: "#fafafa", height: "100%" }} >
+                <div style={{ 
+                    height: "54px", 
+                    background: "white", 
+                    display: "flex",
+                    alignItems: "center",
+                    borderBottom: "1px solid #dbdbdb",
+                    margin: "auto",
+                    position: "fixed",
+                    top: 0,
+                    width: "100%"
+                }}>
+                    <AppHeader 
+                        pictureUrl={`https://randomuser.me/api/portraits/thumb/${Math.random() * 75 > 0.5 ? "men" : "women"}/${Math.ceil(Math.random() * 75)}.jpg`} 
+                        onSearch={value => this.searchText = value} 
+                    />
                 </div>
-                <span style="margin-left: 1em">
-                    <Decrementar/>
-                    <Incrementar/>
-                    <Clientes clientes={this.users}  />
-                </span>
+                <div style={{ minHeight: "92vh", width: "100%", maxWidth: "935px", marginLeft: "auto", marginRight: "auto" }}>
+                    <div style={{ maxWidth: "600px", paddingTop: "32px" }}>
+                        {
+                            posts
+                                .filter(post => post.name.includes(this.searchText))
+                                .map(post => <ContentCard key={post.name} profile={post.name} picture={post.picture} comments={post.comments} avatar={post.avatar} />)
+                        }
+                    </div>
+                </div>
             </div>
         )
     }
-}
-
-class Incrementar extends MithrilTsxComponent<{}> {
-    // prettier-ignore
-    view() {
-        return (
-            <button class="btn btn-default" onclick={() => estado.incrementar()}>
-                <i class="glyphicon glyphicon-plus"/>
-            </button>
-        )
-    }
-}
-
-class Decrementar extends MithrilTsxComponent<{}> {
-    // prettier-ignore
-    view() {
-        return (
-            <button class="btn btn-default" onclick={() => estado.decrementar()}>
-                <i class="glyphicon glyphicon-minus"/>
-            </button>
-        )
-    }
-}
-
-class Contador extends MithrilTsxComponent<{}> {
-    // prettier-ignore
-    view() {
-        return (
-            <span style={{color: estado.contador < 0 ? "red" : "" }}>
-                {estado.contador}
-            </span>
-        )
-    }
-}
-
-
-const cssCentrado =  {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100vh",
 }

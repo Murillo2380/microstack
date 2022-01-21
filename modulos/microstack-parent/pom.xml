@@ -20,7 +20,7 @@
         <servlet-api-release-version>3.1.0</servlet-api-release-version>
         <spring-release-version>5.2.1.RELEASE</spring-release-version>
         <jooq.version>3.1.0</jooq.version>
-        <h2.version>1.4.200</h2.version>
+        <h2.version>2.1.210</h2.version>
     </properties>
 
     <dependencyManagement>
